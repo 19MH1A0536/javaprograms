@@ -1,0 +1,41 @@
+//Write a Java program that illustrates “super” keyword. 
+
+class RoomArea12
+{
+ int width,length;
+ RoomArea12(int width,int length)
+ {
+  this.width=width;this.length=length;
+ }
+ int getArea()
+ {
+ return width*length;
+ }
+}
+class RoomVolume12 extends RoomArea12
+{
+ int height;
+ RoomVolume12(int width,int length,int height)
+ {
+  super(width,length);
+  this.height=height;
+ }
+ int getVolume()
+ {
+  System.out.println("Area is "+super.getArea());
+  return width*length*height;
+ }
+}
+
+class P15536
+{
+ public static void main(String args[])
+ {
+  RoomVolume12 r1=new RoomVolume12(10,20,30);
+ int area=r1.getArea();
+ int vol=r1.getVolume();
+ System.out.println("Area of Room is "+area);
+  System.out.println("Volume of Room is "+vol);
+ 
+  }
+}
