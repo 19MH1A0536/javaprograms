@@ -1,0 +1,24 @@
+/*Five Bikers compete in a race such that they drive at a constant speed which may or may not be the same as the other. 
+To qualify the race, the speed of a racer must be more than the average speed of all 5 racers. 
+Take as input the speed of each racer and print back the speed of qualifying racers. */
+
+class P3536
+{
+ public static void main(String args[])
+{
+ int i=0,sum=0;
+ for(i=0;i<args.length;i++)
+ {
+  sum=sum+Integer.parseInt(args[i]);
+  }
+  double avg=(double)sum/args.length;
+  System.out.println("Qualification speed for race:"+avg);
+  for(i=0;i<args.length;i++)
+  {
+   if(Integer.parseInt(args[i])>avg)
+   {
+     System.out.println("Racer "+(i+1)+"is qualified in the race with "+args[i]+"  speed");
+   }
+  }
+ }
+}
