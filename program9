@@ -1,0 +1,26 @@
+//Write a Java Program to implement a class mechanism. Create a class, methods and invoke them inside main method.
+
+class ClassMech
+{
+  int width,length,height;
+  int getArea()
+  {
+   return width*length;
+  }
+  int getVolume()
+  {
+   return width*length*height;
+  }
+}
+class P9536
+{
+ public static void main(String args[])
+ {
+   ClassMech c1=new ClassMech();
+   c1.width=10;c1.length=20;c1.height=5;
+   int Area=c1.getArea();
+   int Volume=c1.getVolume();
+   System.out.println("Area:"+Area);
+   System.out.println("Volume:"+Volume);
+ }
+}
