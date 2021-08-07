@@ -1,0 +1,24 @@
+//Write a Java Program to implement  constructor overloading.
+
+class Overloading
+{
+ int width,length,height;
+ Overloading(int w,int l)
+ {
+    width=w;length=l;
+    System.out.println("Area="+width*length);
+ }
+ Overloading(int w,int l,int h)
+ {
+    width=w;length=l;height=h;
+    System.out.println("Volume="+width*length*height);
+ }
+}
+class P11536
+{
+ public static void main(String args[])
+ {
+  Overloading o1=new Overloading(10,20);
+  Overloading o2=new Overloading(10,20,30); 
+ }
+}
