@@ -1,0 +1,29 @@
+//Write a Java Program to implement a constructor.
+
+class AreaVolume
+{
+ int width,length,height;
+ AreaVolume(int w,int l,int h)
+ {
+  width=w;length=l;height=h;
+ }
+ int getArea()
+ {
+   return width*length;
+ }
+ int getVolume()
+ {
+   return width*length*height;
+ }
+}
+class P10536
+{
+ public static void main(String args[])
+ {
+  AreaVolume a1=new AreaVolume(10,20,5);
+  int area=a1.getArea();
+  int volume=a1.getVolume();
+  System.out.println("Area of Room:"+area);
+  System.out.println("Volume of Room:"+volume);
+ }
+}
