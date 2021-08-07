@@ -1,0 +1,39 @@
+/*Write a Java Program that display the roots of a quadratic equation ax2+bx+c=0. 
+Calculate the discriminate D and basing on the value of D, describe the nature of roots. */
+
+import java.util.*;
+class P2536
+{
+   public static void main(String args[])
+  {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter the coefficient of the x^2:");
+    int a=sc.nextInt();
+    System.out.println("Enter the coefficient of the x:");
+    int b=sc.nextInt();
+    System.out.println("Enter the constant value:");
+    int c=sc.nextInt();
+    System.out.println("Quadratic equation:"+a+"x^2+"+b+"x+"+c);
+    double D=(b*b)-(4*a*c);
+    double r1=0,r2=0;
+    if(D==0)
+    {
+      System.out.println("Roots are real and equal");
+      r1=r2=-(b)/(2*a);
+      System.out.println("Roots are:"+r1+","+r2);
+     }
+    else if(D<0)
+    {
+    System.out.println("Roots are imaginary");
+    }
+    else if(D>0)
+    {
+    System.out.println("Real and Distinct roots");
+    r1=(-(b)+(Math.sqrt(D)))/(2*a);
+     r2=(-(b)-(Math.sqrt(D)))/(2*a);
+     System.out.println("Roots are:"+r1+","+r2);
+    }
+      
+ }
+}
+ 
