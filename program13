@@ -1,0 +1,30 @@
+//Write a Java Program to implement Single Inheritance.
+
+class RoomArea
+{
+ int width,length;
+ int getArea()
+ {
+   return width*length;
+ }
+}
+class RoomVolume extends RoomArea
+{
+ int height;
+ int getVolume()
+ {
+   return width*length*height;
+ }
+}
+class P13536
+{
+ public static void main(String args[])
+ {
+  RoomVolume r1=new RoomVolume();
+  r1.width=20;r1.length=40;r1.height=10;
+  int Area=r1.getArea();
+  int Volume=r1.getVolume();
+  System.out.println("Area of Room:"+Area);
+  System.out.println("Volume of Room:"+Volume);
+ }
+}
