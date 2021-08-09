@@ -1,0 +1,47 @@
+//Write a Java program that implements an interface. 
+
+interface IF1
+{
+ int a=10;
+ void display();
+ static void display1()
+ {
+   System.out.println("static method");
+ }
+}
+interface IF2
+{
+ int b=20;
+ void show();
+ default void show1()
+ {
+   System.out.println("default method");
+ }
+}
+class B
+{
+  int c;
+}
+class A extends B implements IF1,IF2
+{
+  int d=40;
+  public void display()
+  {
+    System.out.println("abstract method in Interface1 "+a+" "+b+" "+c+" "+d);
+  }
+  public void show()
+  {
+    System.out.println("abstract method in Interface2 "+a+" "+b+" "+c+" "+d);
+  }
+}
+class P16536
+{
+ public static void main(String args[])
+ {
+  A a1=new A();
+  IF1.display1();
+  a1.show1();
+  a1.display();
+  a1.show();
+ }
+}
