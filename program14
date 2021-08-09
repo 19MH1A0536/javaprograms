@@ -1,0 +1,33 @@
+//Write a Java Program to implement Multi level Inheritance. 
+
+class Parent
+{
+  void display1()
+  {
+    System.out.println("From Parent class ");
+  }
+}
+class Child extends Parent
+{
+  void display2()
+  {
+   System.out.println("From Child Class");
+  }
+}
+class Subchild extends Child
+{
+  void display3()
+  {
+   System.out.println("From Subchild class");
+  }
+}
+class P14536
+{
+  public static void main(String args[])
+ {
+  Subchild s1=new Subchild();
+  s1.display1();
+  s1.display2();
+  s1.display3();
+ }
+}
