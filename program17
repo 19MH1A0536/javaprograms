@@ -1,0 +1,20 @@
+//Write a Java program that describes Exception handling Mechanism. 
+
+class P17536
+{
+ public static void main(String args[])
+ {
+   int a=100,b=40,c=20,result1=0,result2=0;
+   int x[]={11,22,33};
+   result2=a/(b+c);
+   try
+   {
+     System.out.println("x[5]="+x[5]);
+   }
+   catch(ArrayIndexOutOfBoundsException ai)
+   {
+      System.out.println("Array index error..");
+   }
+   System.out.println("Result2="+result2);
+ }
+}
